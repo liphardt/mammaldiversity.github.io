@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <head>
+        <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Mammal Diversity Database</title>
+    <meta name="description" content="">
+  
+    <link rel="stylesheet" href="/css/main.css">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+    </head>
+    <header>
+        <!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <header class="site-header">
+        <h1>
+            <img src="/assets/images/favicon128.png">  Mammal Diversity Database
+        </h1>
+    </header>
+</html>
+    </header>
+    <body>
+        <nav>
+        </nav>
+        <section>
+            <p>[<a href="https://github.com/mammaldiversity/mammaldiversity.github.io/edit/master/index.md" target="_blank">Edit</a>]</p>
+
+<nav>
+<a class="link" href="explore.html">Explore the MDD</a>
+<a class="link" href="assets/data/mdd.csv">Download the Database</a>
+</nav>
+
+<p>
+<h1>Welcome to the Mammal Diversity Database</h1>
+</p>
+
+<script type="text/javascript" src="/js/papaparse.min.js"></script>
+
+<script>
+    var data;
+    const file = "/assets/data/mdd.csv";
+    console.log(file);
+    function loadData() {
+        console.log("loading in MDD data");
+        data = Papa.parse("/assets/data/mdd.csv", {
+            header: true,
+            complete: function(results) {
+                console.log("finished", results.data);
+            }});
+        console.log("Data loaded and parsed");
+        }
+</script>
+
+
+        </section>
+    </body>
+</html>
